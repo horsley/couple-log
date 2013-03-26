@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by JetBrains PhpStorm.
  * User: horsley
@@ -56,7 +56,7 @@ function http_digest_parse($txt)
 function echo_log($log_item, $return = false) {
     $ret = '';
     $ret .= '<blockquote>';
-    $ret .= '<p>' . $log_item->content . '</p>';
+    $ret .= '<p>' . stripslashes($log_item->content) . '</p>';
     $ret .= '<small>'. date('Y/m/d H:i:s ', $log_item->time)  . '</small>';
     $ret .= '</blockquote>';
 
